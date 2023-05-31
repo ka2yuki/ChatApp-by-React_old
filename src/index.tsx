@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import ChannelListNav from './components/ChannelList';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { Container } from 'semantic-ui-react';
-import { Switch } from 'react-router-dom';
+import { Routes } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
