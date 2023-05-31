@@ -1,15 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import 'semantic-ui-css/semantic.min.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ChannelListNav from './components/ChannelList';
+import { BrowserRouter, Route } from 'react-router-dom';
+import { Container } from 'semantic-ui-react';
+import { Switch } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      {/* The rest of your app goes here */}
+      <ChannelListNav />
+      <main style={{margin: '1rem 0 1rem 16rem'}}>
+        <Container>
+          <Switch>
+            <Route />
+            <Route />
+          </Switch>
+        </Container>
+      </main>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
