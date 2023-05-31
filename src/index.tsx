@@ -9,6 +9,17 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { Container } from 'semantic-ui-react';
 import { Routes } from 'react-router-dom';
 
+const Home = () => {
+  return ( 
+    <p>HOME</p> 
+  );
+}
+const Contents = () => {
+  return (
+    <p>内容</p>
+  )
+}
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
@@ -19,9 +30,16 @@ root.render(
       <ChannelListNav />
       <main style={{margin: '1rem 0 1rem 16rem'}}>
         <Container>
+          {/* Routingで表示内容が切り替わる部分 */}
           <Routes>
-            <Route />
-            <Route />
+            <Route
+              path='/'
+              element={<Home />}
+            />
+            <Route
+              path='/channels/:channelName'
+              element={<Contents />}
+            />
           </Routes>
         </Container>
       </main>
