@@ -19,10 +19,10 @@ root.render(
       <ChannelListNav />
       <main style={{margin: '1rem 0 1rem 16rem'}}>
         <Container>
-          <Switch>
+          <Routes>
             <Route />
             <Route />
-          </Switch>
+          </Routes>
         </Container>
       </main>
     </BrowserRouter>
