@@ -1,20 +1,32 @@
-import React from 'react'
-import { Menu } from 'semantic-ui-react'
+import React from 'react';
+import { Icon, Menu } from 'semantic-ui-react';
+import { NavLink } from 'react-router-dom';
 
-interface Props {
-    
+const channels = ['general', 'random'];
+
+const ChannelListNav = () => {
+    return ( 
+        <Menu inverted vertical fixed={'left'}>
+            <Menu.Item>
+                HOME<Icon name='home' />
+            </Menu.Item>
+            <Menu.Item>
+                Channels<Icon name='list' />
+                <Menu.Menu>
+                    {channels.map(channel => 
+                    <Menu.Item 
+                        key={channel}
+                        name={channel}
+                        as={NavLink}
+                        to={{pathname: `/channels/${channel}`}}
+                        >
+                        {channel}
+                    </Menu.Item>
+                    )}
+                </Menu.Menu>
+            </Menu.Item>
+        </Menu>
+    );
 }
  
-interface State {
-    
-}
- 
-class ChannelList extends React.Component<Props, State> {
-    state = { hoge: 0 }
-    render() { 
-        return ( 
-         );
-    }
-}
- 
-export default ChannelList;
+export default ChannelListNav;
