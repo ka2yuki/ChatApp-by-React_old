@@ -1,3 +1,22 @@
+# メモ
+## git logについて
+
+- Updated：参考書籍2018年からアップデートがかかっていた部分。改善した部分。
+
+
+## 今回参考にした書籍情報
+![React、Angular、Vue.js、React Nativeを使って学ぶ はじめてのフロントエンド開発書影](public/img/book_thumbnail.png "React、Angular、Vue.js、React Nativeを使って学ぶ はじめてのフロントエンド開発書影")
+
+- 出版社: 技術評論社 ([出版社のページへ](http://gihyo.jp/book/2018/978-4-7741-9706-7))
+- [Amazon URL](https://www.amazon.co.jp/dp/4774197068/)
+- 2018年5月9日紙版発売
+- 2018年5月9日電子版発売
+   
+  
+  
+  
+
+---
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
