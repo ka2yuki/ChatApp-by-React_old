@@ -1,8 +1,11 @@
-# メモ
-## git logについて
+# 修正履歴
+[commits](https://github.com/ka2yuki/ChatApp-by-React/commits/main)
 
-- Updated：参考書籍2018年からアップデートがかかっていた部分。改善した部分。
+# 接頭辞(prefix)について
+Updated：参考書籍2018年からアップデートがかかっていた部分。
 
+# めも
+- React v16.7 から「Hooks」が導入されて「関数コンポーネント」でも「state, props」が扱えるようになった。
 
 ## 今回参考にした書籍情報
 ![React、Angular、Vue.js、React Nativeを使って学ぶ はじめてのフロントエンド開発書影](public/img/book_thumbnail.png "React、Angular、Vue.js、React Nativeを使って学ぶ はじめてのフロントエンド開発書影")
