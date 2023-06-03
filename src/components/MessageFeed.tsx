@@ -1,4 +1,5 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import { Comment, Header } from "semantic-ui-react";
 
 interface Message {
@@ -12,35 +13,27 @@ interface Message {
     date?: string;
 }
 
-interface MessageFeedProps {
-   channelName: string; 
-}
 interface MessageFeedState {
    messages: Message[];
 }
  
-class MessageFeed extends React.Component<MessageFeedProps, MessageFeedState> {
-    constructor(props: MessageFeedProps) {
-        super(props);
-        this.state = { messages: [] };
-    }
-    render() { 
-        return ( 
-            <Comment.Group>
-                <Header>{this.props.channelName}</Header>
-                {this.state.messages.slice().reverse().map(message=>
-                <Comment key={message.id}>
-                    <Comment.Avatar src={message.user?.avatarUrl || '/img/avatar.png'} />
-                    <Comment.Content>
-                        <Comment.Author as='a'>{message.user?.name}</Comment.Author>
-                        <Comment.Metadata>{message.date}</Comment.Metadata>
-                        <Comment.Text>{message.body}</Comment.Text>
-                    </Comment.Content>
-                </Comment>
-                )}
-            </Comment.Group>
-         );
-    }
+function MessageFeed() {
+    const params = useParams();
+    return ( 
+        <Comment.Group>
+            <Header>{params.channelName}</Header>
+            {/* {this.state.messages.slice().reverse().map(message=>
+            <Comment key={message.id}>
+                <Comment.Avatar src={message.user?.avatarUrl || '/img/avatar.png'} />
+                <Comment.Content>
+                    <Comment.Author as='a'>{message.user?.name}</Comment.Author>
+                    <Comment.Metadata>{message.date}</Comment.Metadata>
+                    <Comment.Text>{message.body}</Comment.Text>
+                </Comment.Content>
+            </Comment>
+            )} */}
+        </Comment.Group>
+        );
 }
  
 export default MessageFeed;
