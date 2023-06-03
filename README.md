@@ -1,13 +1,15 @@
 # 修正履歴
 [commits](https://github.com/ka2yuki/ChatApp-by-React/commits/main)
 
-# 接頭辞(prefix)について
-Updated：参考書籍2018年からアップデートがかかっていた部分。
+# Upgrade情報
+- React v16.7 から「Hooks」が導入されることによって、「関数コンポーネント」でも「state, props」が扱えるようになっている。
+- react-router-dom **v6**から、react-router型定義ファイルに「`export interface match`」がないようで、、[github.com/../react-router/../packages/react-router-dom/index.tsx](https://github.com/remix-run/react-router/blob/main/packages/react-router-dom/index.tsx#L168)
+  - 「Hooks」の `useParams()`
+などで URL params を扱う感じ(たぶん)。<br>
+「Hooks」を使う際は、`fucnctionnal component`で使う必要があるようだ。<br>
+(Classコンポーネントで扱うためには、関数コンポーネントで一旦Classコンポーネントをラップして、渡す...とpropsで受け取れる雰囲気...)。。たぶん
 
-# めも
-- React v16.7 から「Hooks」が導入されて「関数コンポーネント」でも「state, props」が扱えるようになった。
-
-## 今回参考にした書籍情報
+# 今回参考にした書籍情報
 ![React、Angular、Vue.js、React Nativeを使って学ぶ はじめてのフロントエンド開発書影](public/img/book_thumbnail.png "React、Angular、Vue.js、React Nativeを使って学ぶ はじめてのフロントエンド開発書影")
 
 - 出版社: 技術評論社 ([出版社のページへ](http://gihyo.jp/book/2018/978-4-7741-9706-7))
