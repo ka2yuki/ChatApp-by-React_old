@@ -17,7 +17,19 @@
 - 2018年5月9日紙版発売
 - 2018年5月9日電子版発売
    
-  
+# 作成手順
+- G-Navエリア
+- Containersエリア
+- Containersへの各部品
+  - フィード(component)
+    - props: ok
+    - state: 2 
+      - use context() (functional component)
+  - フォーム(component)
+    - stete: 1
+      - context() か Redux.
+- firebaseで簡易API
+- API取得コンポーネント
   
   
 
