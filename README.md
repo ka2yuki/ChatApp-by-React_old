@@ -1,3 +1,31 @@
+githubに登録したMailアドレスが間違えていたので、  
+コミット履歴のメールアドレスを全て変更しました。
+# Mail変更方法. for git commit history.
+Mailアドレスが間違っていたので以下を参照。
+- 記述通りハッシュ値が変わったのか、プッシュが同じリポジトリにうまくできなかったので、新規リポジトリ作成で対応。
+https://zenn.dev/hideoka/articles/1cda51b9cdfdd8
+
+```bash
+# OS: WSL
+python3 --version
+# -> Python 3.11.3
+
+# install
+pip3 install git-filter-repo
+# コマンドファイル作成
+touch mailmap　# ファイル内容は下記。
+
+# 過去コミットのemail変更。
+git filter-repo -f --mailmap <mailmapのpath>
+# ハッシュ値が変わり、既存リポジトリとコンフリクトになる為、、
+# 新たにリポジトリを作成, push
+```
+`mailmap` 内容：
+```
+<new_email@example.com> <old_email@example.com>
+```
+
+
 # 修正履歴
 [commits](https://github.com/ka2yuki/ChatApp-by-React/commits/main)
 
