@@ -8,16 +8,12 @@ import ChannelListNav from './components/ChannelList';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { Container } from 'semantic-ui-react';
 import { Routes } from 'react-router-dom';
+import Channel from './containers/Channel';
 
 const Home = () => {
   return ( 
     <p>HOME</p> 
   );
-}
-const Contents = () => {
-  return (
-    <p>内容</p>
-  )
 }
 
 const root = ReactDOM.createRoot(
@@ -38,7 +34,7 @@ root.render(
             />
             <Route
               path='/channels/:channelName'
-              element={<Contents />}
+              element={<Channel />}
             />
           </Routes>
         </Container>
